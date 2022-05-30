@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  php:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: php-server
+    hostname: server-bakend
+    volumes:
+      - type: bind
+        source: ./backend/src
+        target: /src
