@@ -1,12 +1,12 @@
 version: '3.8'
 services:
-  php:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+  php-apache-environment:
     container_name: php-server
     hostname: server-bakend
+    image: php:apache
     volumes:
       - type: bind
         source: ./backend/src
-        target: /src
+        target: /var/www/html/
+    ports:
+      - 80:80

@@ -1,4 +1,5 @@
-FROM php
-COPY ./src /src
+FROM php:apache
+COPY ./src /var/www/html/
 WORKDIR /src
-CMD [ "php", "-S", "localhost:80" ]
+
+# CMD ["php", "index.php"]

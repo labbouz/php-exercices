@@ -1,4 +1,5 @@
 <?php
+$a = 1;
+$b = '1';
 
-echo "LABBOUZ ABDELMONAM";
-
+echo $a == $b;
